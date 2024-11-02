@@ -16,7 +16,7 @@ header h1 {
 header h1 span {
     color: #C4EA52;
 }
-header nav {
+header nav ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
