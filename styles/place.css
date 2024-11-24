@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --part-red: red;
+    --part-blue: blue;
+    --border-bottom: 3px solid rgb(224, 133, 133);
+    
+}
+body {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.red {
+    background-color: var(--part-red);
+    padding: 20px;
+}
+h1 {
+    padding: 5px;
+    text-align: center;
+}
+.blue {
+    background-color: var(--part-blue);
+    padding: 20px;
+}
+.hero img {
+    width: 100%;
+    height: auto;
+    border-bottom: 10px solid var(--part-blue);
+}
+.data {
+    line-height: 2;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    border-bottom: var(--border-bottom);
+    margin-bottom: 20px;
+}
+
+.data ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.data ul li {
+    font-size: 14pt;
+}
+.weather {
+    line-height: 2;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    border-bottom: var(--border-bottom);
+    margin-bottom: 20px;
+}
+.weather ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.weather ul li {
+    font-size: 14pt;
+}
+.weather img {
+    width: 200px;
+    height: auto;
+}
+footer {
+    background-color: var(--part-blue);
+    padding: 30px;
+    text-align: center;
+    font-size: 14pt;
+}
+footer p {
+    color: #fff;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paraguay</title>
+    <meta name="description" content="This is a page to do the assignment of W03 Assignment: Country Page">
+    <meta name="author" content="Luis Estigarribia">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="red"></div>
+        <h1>Paraguay</h1>
+        <div class="blue"></div>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/paraguay-large.webp" media="(min-width: 800px">
+                <img src="images/paraguay.webp" alt="Palacio de los Lopez building">
+            </picture>
+        </div>
+        <div class="data">
+            <h1>Data</h1>
+            <ul>
+                <li><b>Area:</b> 406,752 sq km</li>
+                <li><b>Population:</b> 6,929,153</li>
+                <li><b>Capital:</b> Asunción</li>
+                <li><b>Languges:</b> Spanish, Guarani</li>
+                <li><b>Currency:</b> Guarani(PYG)</li>
+                <li><b>Time Zone:</b> GMT-3</li>
+                <li><b>Calling Code:</b> +595</li>
+                <li><b>Internet TLD:</b> .py</li>
+            </ul>
+        </div>
+        <div class="weather">
+            <h1>Weather</h1>
+            <picture>
+                <img src="images/sunny.svg" alt="weather icon">
+            </picture>
+            <ul>
+                <li id="temp"></li>
+                <li><b>Conditions: </b>Sunny</li>
+                <li id="wind"></li>
+                <li id="windChill"></li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p><span id="year"></span> | Luis Estigarribia | Paraguay</p>
+        <span id="lastmodified"></span>
+    </footer>
+</body>
+</html>
