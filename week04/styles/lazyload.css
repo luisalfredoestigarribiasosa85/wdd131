@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 400px;
+    margin: 0 auto;
+}
+header h1 {
+    text-align: center;
+}
+main img {
+    display: block;
+    margin: 20px auto;
+    animation: fade 5s;
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+footer {
+    text-align: center;
+}
