@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #FFF4E6;
+    background-color: #FAFAFA;
     width: 600px;
     margin: 30px auto;
     line-height: 1.5;
 }
 h1, h2 {
-    color: #FF6F61;
+    color: #D84315;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -22,7 +22,7 @@ p, pre {
 }
 a {
     text-decoration: none;
-    color: #4CAF50;
+    color: #1B5E20;
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
