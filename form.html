@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="This is an activity for the W05 Assignment: Product Review Form">
+    <meta name="author" content="Luis Estigarribia">
+    <title>Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get" id="reviewForm">
+            <label for="pname">Product Name</label>
+            <select name="pname" id="pname" required>
+                <option value="Choose an option" disabled selected>Select a Product</option>
+            </select>
+
+            <label for="rating">Overall Rating</label>
+                <div class="rating">
+                    <label for="rating1">
+                    <input type="radio" name="rating" id="rating1" value="1" />
+                    <span>★</span>
+                    </label>
+                    <label for="rating2">
+                    <input type="radio" name="rating" id="rating2" value="2" />
+                    <span>★★</span>
+                    </label>
+                    <label for="rating3">
+                    <input type="radio" name="rating" id="rating3" value="3" />
+                    <span>★★★</span>
+                    </label>
+                    <label for="rating4">
+                    <input type="radio" name="rating" id="rating4" value="4" />
+                    <span>★★★★</span>
+                    </label>
+                    <label for="rating">
+                    <input type="radio" name="rating" id="rating" value="5" />
+                    <span>★★★★★</span>
+                    </label>
+                </div>                
+
+            <label for="date">Date of Installation</label>
+            <input type="date" name="date" id="date" required>
+
+            <label for="features">Which features did you find useful in the product? <br>(Check all that apply)</label>
+                <fieldset>
+                    <input type="checkbox" name="Durability" id="features" value="Durability">
+                    <span>Durability</span>
+                </fieldset>
+                
+                <fieldset>
+                    <input type="checkbox" name="ease" id="ease" value="ease">
+                    <span>Ease of use</span>
+                </fieldset>
+                
+                <fieldset>
+                    <input type="checkbox" name="performance" id="performance" value="performance">
+                    <span>Performance</span>
+                </fieldset>
+                
+                <fieldset>
+                    <input type="checkbox" name="design" id="design" value="design">
+                    <span>Design</span>
+                </fieldset>
+
+            <label for="review">Written review (Optional)</label>
+            <textarea name="review" id="review"></textarea>
+
+            <label for="name">Your Name (Optional)</label>
+            <input type="text" name="name" id="name" autocomplete="name">
+
+            <input type="submit" value="Post review" id="submit">
+        </form>
+    </main>
+    <footer>
+        <p><span id="year"></span> | Luis Estigarribia | Paraguay</p>
+        <span id="lastmodified"></span>
+    </footer>
+</body>
+</html>
