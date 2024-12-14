@@ -123,3 +123,21 @@ footer {
         font-size: 60px;
     }
 }
+
+label[for="pname"]::after {
+    content: "*";
+    color: #a40303;
+    font-size: 14pt;
+}
+
+span.rate::after {
+    content: "*";
+    font-size: 14pt;
+    color: #a40303;
+}
+
+label[for="date"]::after {
+    content: "*";
+    font-size: 14pt;
+    color: #a40303;
+}
