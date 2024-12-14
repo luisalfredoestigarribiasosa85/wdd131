@@ -26,29 +26,49 @@ main form {
     display: flex;
     flex-direction: column;
 }
-label {
+label, form .rate, form .features {
     margin-top: 10px;
     font-weight: 700;
 }
-.rating {
+
+.label-container {
     display: flex;
-    align-items: center;
     gap: 10px;
+    padding: 10px;
+}
+.label-container .radio.container {
+    display: block;
 }
 
-.rating label {
+.label-container input {
+    margin-right: 8px;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkbox-item {
     display: flex;
     align-items: center;
+    gap: 8px;
+}
+
+.checkbox-item label {
     cursor: pointer;
 }
 
-.rating span {
-    font-size: 20px;
-    color: #0b0b0b;
+input[type="checkbox"] {
+    margin: 9px 5px 0 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
-.rating input[type="radio"]:checked + span {
-    color: #574f00;
+form .checkbox-container label {
+    font-weight: 400;
 }
 input, select {
     padding: 8px;

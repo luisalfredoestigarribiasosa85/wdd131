@@ -5,13 +5,11 @@ const reviewCount = document.getElementById('reviewCount');
 const submit = document.getElementById('submit');
 const reviewForm = document.getElementById('reviewForm');
 
-// Actualiza el año actual y última modificación
 const today = new Date();
 const yearNow = today.getFullYear();
 if (year) year.innerHTML = yearNow;
 if (lastModified) lastModified.innerHTML = `Last Modification: ${document.lastModified}`;
 
-// Poblar el select con productos si existe
 if (select) {
     const products = [
         { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
@@ -31,26 +29,21 @@ if (select) {
 
 if (submit && reviewForm) {
     submit.addEventListener('click', (event) => {
-        event.preventDefault(); // Evita el envío por defecto del formulario
+        event.preventDefault();
 
         let review = parseInt(localStorage.getItem('reviewCount')) || 0;
 
-        // Incrementa el contador
         review++;
 
-        // Guarda en localStorage
         localStorage.setItem('reviewCount', review);
 
-        // Opcional: Reinicia el formulario
         reviewForm.reset();
 
-        // Redirige manualmente a review.html
         window.location.href = 'review.html';
     });
 }
 
 
-// Mostrar el contador en la página review.html
 if (reviewCount) {
     const reviews = parseInt(localStorage.getItem('reviewCount')) || 0;
     reviewCount.textContent = reviews;
