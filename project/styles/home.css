@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #FAFAFA;
+    place-items: center;
+}
+h1 {
+    font-family: "Dancing Script", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 45px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #fff;
+}
+h1, h2 {
+    color: #791e02;
+}
+h2, a {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 35vw;
+    padding: 20px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25vw;
+}
+nav li {
+    list-style: none;
+}
+nav li a {
+    text-decoration: none;
+    color: #1B5E20;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14pt;
+}
+nav li a:hover {
+    border-bottom: 3px solid green;
+}
+main div.categories {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    margin: 30px auto;
+}
+main div.categories figure img {
+    width: 300px;
+    border-radius: 8px;
+}
+figcaption {
+    font-size: 12pt;
+    text-align: center;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px;
+}
+main section.hero {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+main section.hero img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+/* Footer Container */
+footer {
+    background: linear-gradient(to right, #1B5E20, #2E7D32);
+    color: #fff;
+    padding: 30px 20px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Content Wrapper */
+footer .footer-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    justify-items: center;
+}
+
+/* Copyright Text */
+footer p {
+    font-family: "Roboto", serif;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    width: 100%;
+}
+
+/* Year Span */
+footer #year {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Last Modified Text */
+footer #lastmodified {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+}
+
+/* Decorative Top Border */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #791e02, #a52714);
+}
+
+/* Hover Effects */
+footer p:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer .footer-content {
+    animation: fadeInUp 0.5s ease-out forwards;
+}

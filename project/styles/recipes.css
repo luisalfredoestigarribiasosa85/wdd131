@@ -1,0 +1,70 @@
+/* recipes.css */
+.recipe-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card h3 {
+    color: #791e02;
+    margin-bottom: 15px;
+    font-family: "Poppins", serif;
+}
+
+.recipe-card h4 {
+    color: #1B5E20;
+    margin: 10px 0;
+    font-family: "Poppins", serif;
+}
+
+.recipe-card ul, .recipe-card ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-family: "Roboto", serif;
+}
+
+.recipe-card li {
+    margin: 5px 0;
+}
+
+.favorite-btn, .remove-btn {
+    background-color: #1B5E20;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Poppins", serif;
+    transition: background-color 0.3s;
+}
+
+.favorite-btn:hover {
+    background-color: #2E7D32;
+}
+
+.remove-btn {
+    background-color: #c62828;
+    margin-left: 10px;
+}
+
+.remove-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* favorites.css */
+#favorites-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+#favorites-container p {
+    text-align: center;
+    font-family: "Roboto", serif;
+    color: #666;
+    grid-column: 1 / -1;
+    padding: 20px;
+}

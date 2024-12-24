@@ -1,0 +1,186 @@
+/* Grid Container for Favorites Page */
+#favorites-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Main Title Styling */
+.favorites h2 {
+    text-align: center;
+    color: #791e02;
+    font-family: "Poppins", serif;
+    margin: 30px 0;
+    font-size: 2em;
+}
+
+/* Recipe Card Styling */
+.recipe-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Recipe Title */
+.recipe-card h3 {
+    color: #791e02;
+    font-family: "Poppins", serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1B5E20;
+    padding-bottom: 10px;
+}
+
+/* Section Headers */
+.recipe-card h4 {
+    color: #1B5E20;
+    font-family: "Poppins", serif;
+    font-size: 1.2em;
+    margin: 15px 0 10px 0;
+}
+
+/* Lists Styling */
+.recipe-card ul,
+.recipe-card ol {
+    font-family: "Roboto", serif;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.recipe-card li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* Button Styling */
+.favorite-btn,
+.remove-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.favorite-btn {
+    background-color: #1B5E20;
+    color: white;
+}
+
+.favorite-btn:hover {
+    background-color: #2E7D32;
+    transform: scale(1.02);
+}
+
+.remove-btn {
+    background-color: #c62828;
+    color: white;
+}
+
+.remove-btn:hover {
+    background-color: #d32f2f;
+    transform: scale(1.02);
+}
+
+/* Empty State Message */
+#favorites-container p {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: "Roboto", serif;
+    color: #666;
+    font-size: 1.2em;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #favorites-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+    
+    .recipe-card {
+        padding: 20px;
+    }
+    
+    .recipe-card h3 {
+        font-size: 1.3em;
+    }
+    
+    .favorite-btn,
+    .remove-btn {
+        padding: 10px 15px;
+    }
+}
+
+/* Animation for new cards */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.recipe-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Category Badge */
+.recipe-card::before {
+    content: attr(data-category);
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background-color: #1B5E20;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-family: "Poppins", serif;
+    font-size: 0.8em;
+    text-transform: capitalize;
+}
+
+/* Print Styles */
+@media print {
+    .recipe-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .favorite-btn,
+    .remove-btn {
+        display: none;
+    }
+    
+    #favorites-container {
+        display: block;
+    }
+    
+    .recipe-card {
+        margin-bottom: 20px;
+    }
+}
